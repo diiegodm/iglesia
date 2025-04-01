@@ -1,0 +1,102 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+nav {
+  background-color: #fb6700;
+  padding: 10px 20px;
+  
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+
+/* Logo */
+.logo img {
+  height: 90px; 
+}
+
+/* Lista de enlaces */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+  
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+nav ul li a:hover {
+  background-color: #dddadac2;
+  color:rgba(0, 0, 0, 0.651)
+}
+
+/* Estilo para el icono de la hamburguesa */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 10px;
+}
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  nav ul {
+    display: none;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #fb6700;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    display: block;
+    width: 100%;
+  }
+
+  nav ul li a {
+    padding: 15px;
+    width: 100%;
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
