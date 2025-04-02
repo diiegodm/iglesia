@@ -1,13 +1,18 @@
 <app-navbar></app-navbar>
 
 
-
 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <!-- Texto fijo superpuesto -->
+  <div class="carousel-overlay">
+    <h2>Bienvenidos</h2>
+    <p>Iglesia Renovación Cristiana del Evangelio</p>
+  </div>
+
   <div class="carousel-inner">
     @for (imagen of imagenes; track $index) {
-      <div class="carousel-item" [class.active]="$index === 0">
-        <img [src]="imagen.img" class="d-block w-100 custom-carousel-img" [alt]="imagen.alt">
-      </div>
+    <div class="carousel-item" [class.active]="$index === 0">
+      <img [src]="imagen.img" class="d-block w-100 custom-carousel-img" [alt]="imagen.alt">
+    </div>
     }
   </div>
 
@@ -21,7 +26,52 @@
   </button>
 </div>
 
-<div class="horarios">
 
 
+<div class="body">
+  <div class="horarios">
+
+    <div class="horarios_semana">
+      <h2>horarios</h2>
+  
+      <div class="hora">
+  
+        <div class="sub-div">
+          <h2>Lunes</h2>
+          <p><strong>V.E.A:</strong> 7 AM</p>
+          
+      </div>
+      <div class="sub-div">
+          <h2>Martes</h2>
+          <p><strong>Grupo Bíblico Barrio:</strong> 7:00 PM</p>
+          <p><strong>Barrio Santander</strong> </p>
+      </div>
+      <div class="sub-div">
+          <h2>Miércoles</h2>
+          <p><strong>Grupo Bíblico :</strong> 7:00 PM</p>
+          <p><strong>Barrio Lleras</strong> </p>
+      </div>
+      <div class="sub-div">
+          <h2>Jueves</h2>
+          <p><strong>Grupo Bíblico :</strong> </p>
+          <p><strong>Barrio Pescadero:</strong> </p>
+      </div>
+      <div class="sub-div">
+        <h2>Viernes</h2>
+        <p><strong>Noches de Renovación:</strong> </p>
+        <p>7 PM</p>
+    </div>
+  
+      </div>
+    </div>
+  
+    <div class="mapa">
+      <h1>transmicion en vivo </h1>
+      <img src="assets/restode'recursos/boton-volumen-estereo-musical-objeto_1172-501.avif" alt="">
+  
+    </div>
+  
+  </div>
 </div>
+
+<app-footer></app-footer>  

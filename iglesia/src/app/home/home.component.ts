@@ -1,6 +1,7 @@
 import { Component, ElementRef, ViewChild, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { NavbarComponent } from '../navbar/navbar.component';
+import { FooterComponent } from '../footer/footer.component';
 
 // Bootstrap Carousel solo se importa si estamos en el navegador
 declare let bootstrap: any;
@@ -8,7 +9,7 @@ declare let bootstrap: any;
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NavbarComponent],
+  imports: [NavbarComponent,FooterComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })

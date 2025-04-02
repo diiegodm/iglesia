@@ -1,11 +1,155 @@
+/* ======================= */
+/* CARROUSEL DE IMÁGENES */
+/* ======================= */
 .custom-carousel-img {
-  height: 300px; 
-  object-fit: cover; 
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 5px; 
 }
 
-/* Opcional: ajusta en pantallas más pequeñas */
+
 @media (max-width: 768px) {
   .custom-carousel-img {
     height: 200px;
+  }
+}
+
+/* ======================= */
+/* ESTILOS GENERALES */
+/* ======================= */
+body {
+  background-color: rgba(151, 151, 151, 0.384);
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* ======================= */
+/* PANEL DE HORARIOS */
+/* ======================= */
+.horarios {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 99%;
+  margin: auto;
+  padding-top: 10px;
+  gap: 10px;
+}
+
+.horarios_semana, .mapa {
+  border-radius: 5px;
+  padding-top: 10px;
+  background: white; /* Hace que resalte */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.carousel-overlay {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: "Winky Sans", sans-serif;
+  padding: 20px;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  width: 80%;
+  z-index: 10; /* Asegura que siempre esté por encima de las imágenes */
+}
+.carousel-overlay h2 {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 0;
+  padding-bottom: 20px;
+  text-shadow: 1px 5px 15px white;
+}
+
+.carousel-overlay p {
+  font-size: 25px;
+  margin-top: 5px;
+  text-shadow: 1px 5px 15px white;
+}
+.horarios_semana{
+  padding: 0 20px ;
+}
+.horarios_semana h2 {
+  text-align: center;
+}
+.hora{
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.mapa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mapa img {
+  width: 270px;
+  padding-bottom: 30px;
+}
+
+/* ======================= */
+/* ESTILOS DE SUBDIVS (HORARIOS) */
+/* ======================= */
+.sub-div {
+  background-color: rgba(192, 192, 192, 0.76);
+  padding: 10px;
+  flex: 1;
+  text-align: center;
+  height: 300px;
+  margin: 5px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.sub-div:hover {
+  box-shadow: 2px 4px 15px rgba(44, 44, 44, 0.486);
+}
+
+/* ======================= */
+/* FOOTER */
+/* ======================= */
+.footer {
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+
+.footer a {
+  color: #f8b400;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* ======================= */
+/* RESPONSIVE DESIGN */
+/* ======================= */
+@media (max-width: 768px) {
+  .custom-carousel-img {
+    height: 250px;
+  }
+
+  .horarios, .hora{
+    flex-direction: column;
+  }
+
+  .horarios_semana, .mapa {
+    flex: 100%;
+  }
+
+  .mapa img {
+    width: 100%; /* Para que la imagen del mapa sea más flexible */
+    max-width: 270px;
   }
 }
