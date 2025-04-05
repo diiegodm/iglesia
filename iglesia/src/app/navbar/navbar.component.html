@@ -7,13 +7,13 @@
             <img src="../../assets/imagenes/iglesiaicono.svg" alt="Logo" />
         </div>
 
-        <!-- Icono de la hamburguesa -->
-        <button class="hamburger" id="hamburger-icon">&#9776;</button>
+      
+        <button class="hamburger"  (click)="toggleMenu()">&#9776;</button>
 
-        <!-- Menú de navegación alineado a la derecha -->
+
         <ul id="menu">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Sobre Nosotros</a></li>
+            <li><a [routerLink]="['/home']">Inicio</a></li>
+            <li><a [routerLink]="['/sobre-nosotros']">Sobre Nosotros</a></li>
             <li><a href="#">Estudios</a></li>
             <li><a href="#">Contacto</a></li>
         </ul>
