@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+
+<div class="about-us">
+
+    <div class="container">
+        <div class="content">
+            <h1>Sobre Nosotros</h1>
+            <p>Bienvenido a nuestra página web. Somos una comunidad dedicada a la enseñanza y difusión de la Palabra de
+                Dios.</p>
+            <p>Nuestra misión es ayudar a las personas a crecer en su fe y conocimiento de la Biblia.</p>
+            <p>Ofrecemos estudios bíblicos, recursos y apoyo espiritual para todos aquellos que buscan profundizar en su
+                relación con Dios.</p>
+        </div>
+
+        <hr class="separator"> 
+
+<div class="container-pastores">
+        <h2>Pastores</h2>
+        <p>Conoce a nuestros pastores, quienes están comprometidos en guiar y apoyar a nuestra comunidad.</p>
+        <p>Ellos son líderes espirituales dedicados a enseñar y predicar la Palabra de Dios.</p>
+</div>
+        <div class="container-pastores_card">
+            @for(pastor of pastores; track $index ){
+            <div class="card mb-3" style="max-width: 540px;">
+             
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                          <img [src]="pastor.imagen" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h5 class="card-title">{{pastor.nombre}}</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                          </div>
+                        </div>
+
+                </div>
+            
+              </div>
+            }
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
